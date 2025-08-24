@@ -1,0 +1,8 @@
+Flask
+flask-cors
+requests
+openai
+pyjwt
+oauthlib
+requests-oauthlib
+slack-sdk

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity AI - AI-Powered Dispute Resolution</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="ai-background">
+        <div class="floating-particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="ai-pulse"></div>
+                </div>
+                <span>Clarity AI</span>
+                <div class="ai-badge">Powered by AI</div>
+            </div>
+            
+            <!-- Navigation menu for landing page -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" id="homeLink">Home</a>
+                <a href="#ai-power" class="nav-link" id="aiPowerLink">AI Technology</a>
+                <a href="#features" class="nav-link" id="featuresLink">Features</a>
+                <a href="#demo" class="nav-link" id="demoLink">Live Demo</a>
+                <div class="nav-auth">
+                    <button class="btn-primary" id="loginBtn" onclick="window.location.href='/google_login'">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                </div>
+            </div>
+            
+            <!-- User menu for dashboard (logged in) -->
+            <div class="user-menu" id="userMenu" style="display: none;">
+                <div class="user-info">
+                    <img id="userAvatar" src="" alt="User" class="user-avatar">
+                    <span id="userName"></span>
+                </div>
+                <button class="btn-secondary" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-robot"></i>
+                        <span>Next-Generation AI Dispute Resolution</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Automate Dispute Resolution with 
+                        <span class="ai-gradient">Advanced AI</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Powered by <strong>OpenAI GPT-4</strong> and <strong>Portia AI</strong>, Clarity AI delivers 
+                        ethical, intelligent dispute resolution with 95% accuracy and instant processing.
+                    </p>
+                    
+                    <div class="ai-partners">
+                        <div class="partner-badge">
+                            <i class="fas fa-brain"></i>
+                            <span>OpenAI GPT-4</span>
+                        </div>
+                        <div class="partner-badge">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Portia AI</span>
+                        </div>
+                        <div class="partner-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Ethical AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn-hero primary" onclick="window.location.href='/google_login'">
+                            <i class="fas fa-rocket"></i>
+                            Start AI Resolution
+                        </button>
+                        <button class="btn-hero secondary" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})">
+                            <i class="fas fa-play"></i>
+                            Watch AI Demo
+                        </button>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="counter" data-target="95">0</span>%
+                            </div>
+                            <div class="stat-label">AI Accuracy</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="counter" data-target="10">0</span>s
+                            </div>
+                            <div class="stat-label">Processing Time</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="counter" data-target="99">0</span>%
+                            </div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="ai-interface">
+                        <div class="interface-header">
+                            <div class="ai-status">
+                                <div class="status-dot"></div>
+                                <span>AI Processing Live</span>
+                            </div>
+                            <div class="processing-indicator">
+                                <div class="process-bar"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-analysis-demo">
+                            <div class="analysis-step active">
+                                <i class="fas fa-search"></i>
+                                <span>Analyzing dispute patterns...</span>
+                            </div>
+                            <div class="analysis-step">
+                                <i class="fas fa-brain"></i>
+                                <span>OpenAI processing context...</span>
+                            </div>
+                            <div class="analysis-step">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Portia AI ethical evaluation...</span>
+                            </div>
+                            <div class="analysis-step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Resolution recommended: 94% confidence</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-decision-preview">
+                            <div class="decision-header">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Decision Preview</span>
+                            </div>
+                            <div class="confidence-score">
+                                <span>Confidence Score</span>
+                                <div class="score-bar">
+                                    <div class="score-fill"></div>
+                                </div>
+                                <span class="score-value">94%</span>
+                            </div>
+                            <div class="ai-recommendation">
+                                <strong>Recommended:</strong> Partial Refund - $75.00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Technology Section -->
+        <section id="ai-power" class="ai-technology">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <i class="fas fa-microchip"></i>
+                        <span>Advanced AI Technology</span>
+                    </div>
+                    <h2>Powered by Industry-Leading AI</h2>
+                    <p>Our platform combines the most advanced AI technologies to deliver unparalleled dispute resolution capabilities.</p>
+                </div>
+                
+                <div class="ai-showcase">
+                    <div class="ai-card openai">
+                        <div class="ai-card-header">
+                            <div class="ai-logo">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="ai-info">
+                                <h3>OpenAI GPT-4</h3>
+                                <span>Natural Language Processing</span>
+                            </div>
+                        </div>
+                        <div class="ai-capabilities">
+                            <div class="capability">
+                                <i class="fas fa-language"></i>
+                                <span>Advanced text understanding and context analysis</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-comments"></i>
+                                <span>Human-like reasoning and decision making</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Creative problem solving for complex disputes</span>
+                            </div>
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="metric">
+                                <span class="metric-value">99.9%</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">&lt;2s</span>
+                                <span class="metric-label">Response Time</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-card portia">
+                        <div class="ai-card-header">
+                            <div class="ai-logo">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="ai-info">
+                                <h3>Portia AI</h3>
+                                <span>Ethical Decision Engine</span>
+                            </div>
+                        </div>
+                        <div class="ai-capabilities">
+                            <div class="capability">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Ethical compliance verification and scoring</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-shield-check"></i>
+                                <span>Bias detection and fairness optimization</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Risk assessment and fraud prevention</span>
+                            </div>
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Ethical Compliance</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">0.1%</span>
+                                <span class="metric-label">False Positive Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-card clarity">
+                        <div class="ai-card-header">
+                            <div class="ai-logo">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="ai-info">
+                                <h3>Clarity AI Engine</h3>
+                                <span>Orchestration & Learning</span>
+                            </div>
+                        </div>
+                        <div class="ai-capabilities">
+                            <div class="capability">
+                                <i class="fas fa-sync"></i>
+                                <span>Real-time learning and adaptation</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-puzzle-piece"></i>
+                                <span>Seamless AI model integration</span>
+                            </div>
+                            <div class="capability">
+                                <i class="fas fa-eye"></i>
+                                <span>Human-in-the-loop oversight</span>
+                            </div>
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="metric">
+                                <span class="metric-value">24/7</span>
+                                <span class="metric-label">Availability</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">10K+</span>
+                                <span class="metric-label">Cases/Day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Demo Section -->
+        <section id="demo" class="live-demo">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Live AI Demo</span>
+                    </div>
+                    <h2>Watch AI in Action</h2>
+                    <p>See how our AI analyzes and resolves disputes in real-time</p>
+                </div>
+                
+                <div class="demo-interface">
+                    <div class="demo-input">
+                        <h3>Sample Dispute</h3>
+                        <div class="dispute-card">
+                            <div class="dispute-header">
+                                <span class="dispute-id">#DR-2024-001</span>
+                                <span class="dispute-amount">$150.00</span>
+                            </div>
+                            <div class="dispute-content">
+                                <strong>Issue:</strong> Defective wireless headphones stopped working after 2 days
+                                <br><strong>Customer:</strong> john.doe@email.com
+                                <br><strong>Category:</strong> Product Defect
+                            </div>
+                        </div>
+                        <button class="btn-demo" onclick="startAIDemo()">
+                            <i class="fas fa-brain"></i>
+                            Process with AI
+                        </button>
+                    </div>
+                    
+                    <div class="demo-processing">
+                        <div class="processing-steps">
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Data Analysis</h4>
+                                    <p>AI analyzing customer history, transaction details, and dispute context</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>OpenAI Processing</h4>
+                                    <p>GPT-4 evaluating claim validity and generating resolution options</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Ethical Review</h4>
+                                    <p>Portia AI ensuring fairness and compliance with regulations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-result">
+                        <h3>AI Resolution</h3>
+                        <div class="result-card">
+                            <div class="result-header">
+                                <div class="confidence-badge">
+                                    <span>Confidence: 94%</span>
+                                </div>
+                                <div class="decision-badge approved">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Approved</span>
+                                </div>
+                            </div>
+                            <div class="result-details">
+                                <div class="detail-row">
+                                    <span>Decision:</span>
+                                    <strong>Full Refund</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Amount:</span>
+                                    <strong>$150.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Processing Time:</span>
+                                    <strong>2.3 seconds</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Reasoning:</span>
+                                    <p>Product defect claim validated. Customer has excellent history with low refund ratio. Company policy supports customer satisfaction for genuine quality issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <i class="fas fa-stars"></i>
+                        <span>Powerful Features</span>
+                    </div>
+                    <h2>AI-Driven Capabilities</h2>
+                    <p>Advanced features powered by cutting-edge artificial intelligence</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Smart Analysis</h3>
+                        <p>AI analyzes dispute context, customer history, and behavioral patterns to make intelligent decisions with 95% accuracy.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">OpenAI GPT-4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-balance-scale"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Ethical AI</h3>
+                        <p>Portia AI ensures every decision meets ethical standards and regulatory compliance with built-in fairness verification.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">Portia AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Instant Processing</h3>
+                        <p>Process thousands of disputes instantly with sub-second response times and real-time decision making.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">Real-time AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Fraud Detection</h3>
+                        <p>Advanced ML algorithms detect fraudulent patterns and suspicious activities with 99.9% accuracy.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">Machine Learning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Predictive Analytics</h3>
+                        <p>AI predicts dispute outcomes and customer behavior to optimize resolution strategies proactively.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">Predictive AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Human Oversight</h3>
+                        <p>Seamless human-in-the-loop integration ensures complex cases receive expert review and approval.</p>
+                        <div class="feature-tech">
+                            <span class="tech-badge">Hybrid AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (only shows on landing page) -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-main">
+                        <div class="footer-brand">
+                            <div class="brand-icon">
+                                <i class="fas fa-brain"></i>
+                                <div class="ai-pulse"></div>
+                            </div>
+                            <span>Clarity AI</span>
+                        </div>
+                        <p class="footer-tagline">Revolutionizing dispute resolution with ethical AI and human oversight.</p>
+                        <div class="footer-partners">
+                            <span>Powered by:</span>
+                            <div class="partner-logos">
+                                <div class="partner-logo">OpenAI</div>
+                                <div class="partner-logo">Portia AI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-cta">
+                        <button class="btn-footer" onclick="window.location.href='/google_login'">
+                            <i class="fas fa-rocket"></i>
+                            Get Started with AI
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dashboard (existing code remains the same) -->
+    <div id="dashboard" style="display: none;">
+        <!-- Dashboard content remains unchanged -->
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <h1>AI Dispute Resolution Dashboard</h1>
+                <p>Manage and resolve customer disputes with AI-powered assistance</p>
+            </div>
+            <div class="dashboard-actions">
+                <button class="btn-secondary" onclick="refreshDashboard()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <button class="btn-primary" onclick="processAllTickets()">
+                    <i class="fas fa-robot"></i> Process All with AI
+                </button>
+            </div>
+        </div>
+
+        <!-- Analytics Overview -->
+        <div class="analytics-grid">
+            <div class="analytics-card">
+                <div class="analytics-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="analytics-content">
+                    <div class="analytics-number" id="totalTickets">0</div>
+                    <div class="analytics-label">Total Disputes</div>
+                </div>
+            </div>
+            <div class="analytics-card">
+                <div class="analytics-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="analytics-content">
+                    <div class="analytics-number" id="pendingTickets">0</div>
+                    <div class="analytics-label">Pending Review</div>
+                </div>
+            </div>
+            <div class="analytics-card">
+                <div class="analytics-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="analytics-content">
+                    <div class="analytics-number" id="resolvedTickets">0</div>
+                    <div class="analytics-label">Resolved</div>
+                </div>
+            </div>
+            <div class="analytics-card">
+                <div class="analytics-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="analytics-content">
+                    <div class="analytics-number" id="highRiskTickets">0</div>
+                    <div class="analytics-label">High Risk</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tickets Grid -->
+        <div class="tickets-section">
+            <div class="section-header">
+                <h2>Dispute Tickets</h2>
+                <div class="filter-controls">
+                    <select id="statusFilter" onchange="filterTickets()">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="pending_human_review">Needs Review</option>
+                        <option value="resolved">Resolved</option>
+                        <option value="auto_resolved">Auto-Resolved</option>
+                    </select>
+                    <select id="riskFilter" onchange="filterTickets()">
+                        <option value="all">All Risk Levels</option>
+                        <option value="low">Low Risk</option>
+                        <option value="medium">Medium Risk</option>
+                        <option value="high">High Risk</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tickets-grid" id="ticketsGrid">
+                <!-- Tickets will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing with AI...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let count = 0;
+                
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.textContent = Math.ceil(count);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // AI Demo function
+        function startAIDemo() {
+            const steps = document.querySelectorAll('.step');
+            const btn = document.querySelector('.btn-demo');
+            const result = document.querySelector('.demo-result');
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.classList.add('active');
+                }, index * 800);
+            });
+            
+            setTimeout(() => {
+                result.classList.add('active');
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-brain"></i> Process with AI';
+                steps.forEach(step => step.classList.remove('active'));
+            }, 3000);
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate counters when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                    }
+                });
+            });
+            
+            const statsSection = document.querySelector('.hero-stats');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+</html>

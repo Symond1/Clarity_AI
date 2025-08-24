@@ -1,0 +1,62 @@
+Build a PYTHON app with Google Authentication where users log in and access a dashboard for customer dispute management.
+
+Backend (Express + MongoDB):
+
+Store users, tickets, negotiation logs.
+
+Google OAuth for login.
+
+REST APIs for dispute tickets.
+
+Frontend (React):
+
+Google login.
+
+Dashboard showing dispute tickets (title, description, value).
+
+Each ticket shows: AI proposal (refund/discount/deny), ethical compliance score, and “Approve / Override” buttons for humans.
+
+AI Agents (Portia + OpenAI):
+
+Planning Agent: Analyze ticket → apply company policy → draft resolution.
+
+Execution Agent: If low risk → auto-resolve, else flag to human.
+
+Use OpenAI for reasoning + ethical scoring.
+
+Store all outcomes in MongoDB.
+
+MVP Demo:
+
+Pre-load 10–15 fake dispute tickets in MongoDB.
+
+When user logs in → dashboard fetches tickets.
+
+Portia AI generates proposal + compliance score for each.
+
+Human can override decisions via frontend.
+
+Optional: Email/Slack alert for high-risk cases.
+
+Make sure the frontend is clean and hackathon-demo ready with a simple card layout for tickets.k here are the task you have to do 1)add footer 2)add only start free trial button and remove watch demo 3)add this things in features as well Our Solution
+Clarity AI automates dispute resolution with fairness and human oversight, saving your team time and resources.
+
+• Ethical AI Negotiation
+• Automated Resolution
+• Human Oversight
+Key Features
+⚖️
+Ethical & Fair Outcomes
+AI follows an ethical framework ensuring compliance and fairness.
+
+⚡
+Automated Efficiency
+Save time and resources with automated dispute resolution.
+
+📊
+Data-Driven Insights
+Gain actionable analytics to improve operations. i ALSO HAVE to leveradge the api of portia and open ai also i am using googe auth so give me entire full stack website create suing python apne ai and portia a full stcck orking app with intutive designs it should be follwong this Potential Impact: Evaluates how effectively the agent or solution addresses a meaningful problem or unlocks a valuable use case.
+Creativity & Originality: Assesses the uniqueness of the agent idea, the novelty in how tools are connected, or how Portia is used in unexpected ways.
+Learning & Growth: Recognizes the learning curve tackled during the hackathon, especially for first-time builders or teams experimenting with AI/automation.
+Implementation of the Idea: Reviews how well the idea was executed technically, does the agent function as intended, and does it make good use of Portia's features?
+Aesthetics & UX: Considers how intuitive and user-friendly the final experience is, especially if the project has a frontend or user interaction layer.
