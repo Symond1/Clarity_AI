@@ -11,8 +11,6 @@
 ## ✨ **Live Demo**
 
 
-
-
 [**Try Clarity AI →**](#)
 
 
@@ -60,7 +58,14 @@ Traditional dispute resolution is:
 | Contextual Reasoning                | Ethical Scoring                            |
 | Human-like Analysis                 | Risk Assessment                            |
 
+
 ---
+## 🔄  How Clarity AI Works 
+ 
+
+Customer Dispute 📨 → GPT-4 Analysis 🤖 → Portia AI Ethics & Risk Check ⚖️ → Human Review (if needed) 👤 → Final Resolution ✅
+
+
 ## 🛠️ **Tech Stack**
 
 * **Frontend:** HTML, CSS, JavaScript
