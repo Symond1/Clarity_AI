@@ -1,10 +1,10 @@
 
-#  **Clarity AI**
+# **_Clarity AI – AI-Powered Dispute Resolution System_**
 
-***AI-Powered Dispute Resolution System***
+**_Clarity AI_** is an intelligent platform that **_automates customer dispute resolution_** by combining the cognitive power of **_OpenAI GPT-4_** with the ethical oversight of **_Portia AI_**. Designed to provide **_fast, fair, and compliant resolutions_** in seconds, it transforms a traditionally slow and inconsistent process into a **_scalable and trustworthy solution_** for industries like **_e-commerce, consulting, and customer service_**.  
 
-Clarity AI automates customer dispute resolution using ***OpenAI GPT-4*** + ***Portia AI’s ethical engine*** to deliver **fast, fair, and compliant resolutions** in seconds.
-🚀 Developed for ***AgentHack 2025*** by ***WeMakeDevs***
+🚀 Developed for **_AgentHack 2025_** by **_WeMakeDevs_**, Clarity AI ensures that disputes are resolved efficiently while maintaining **_ethical integrity, regulatory compliance, and human oversight_** whenever necessary.
+
 
 ---
 
