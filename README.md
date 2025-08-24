@@ -50,4 +50,31 @@ Traditional dispute resolution is:
 | Human-like Analysis                 | Risk Assessment                            |
 
 ---
+## 🛠️ **Tech Stack**
+
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Flask, Python
+* **AI/ML:** GPT-4, Portia AI
+
+---
+
+## ⚡ **Quick Start Guide**
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Symond1/Hackathon_1.git
+cd Hackathon_1
+```
+
+### 2️⃣ Setup Backend
+
+```bash
+python -m venv venv
+# Activate virtual environment
+# Windows: venv\Scripts\activate
+# Mac/Linux: source venv/bin/activate
+pip install -r requirements.txt
+```
+
 
