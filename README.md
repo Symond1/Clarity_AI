@@ -77,4 +77,26 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+### 3️⃣ Configure `.env`
+
+Create a `.env` file:
+
+```
+GOOGLE_OAUTH_CLIENT_ID=your_google_client_id
+GOOGLE_OAUTH_CLIENT_SECRET=your_google_client_secret
+SECRET_KEY=anyrandomsecret
+OPENAI_API_KEY=your_openai_api_key
+PORTIA_API_KEY=your_portia_api_key
+SLACK_API_KEY=optional
+```
+
+### 4️⃣ Run Server
+
+```bash
+python app.py
+```
+
+***Access frontend:*** `http://127.0.0.1:5000/`
+
+---
 
