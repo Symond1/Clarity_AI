@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/3198194b-fdc1-49fe-a606-0ae9eaf19402
 * 🤖 **Accuracy:** AI-powered analysis with 95% accuracy
 * 📊 **Samples:** 15 preloaded disputes ready for testing
 * 🌟 **Impact:** Improves dispute resolution speed and fairness
-* 💡  **Creativity & Originality:** Combines GPT-4 cognitive processing with Portia AI’s ethical engine
+* 💡  **Creativity & Originality:** Combines GPT cognitive processing with Portia AI’s ethical engine
 * 📈  **Learning & Growth:** Insights gained during AI integration and system design
 
 ---
