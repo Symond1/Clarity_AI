@@ -1,7 +1,9 @@
 
 # **_Clarity AI – AI-Powered Dispute Resolution System_**
 
-**_Clarity AI_** is an intelligent platform that **_automates customer dispute resolution_** by combining the cognitive power of **_OpenAI GPT-4_** with the ethical oversight of **_Portia AI_**. Designed to provide **_fast, fair, and compliant resolutions_** in seconds, it transforms a traditionally slow and inconsistent process into a **_scalable and trustworthy solution_** for industries like **_e-commerce, consulting, and customer service_**.  
+**Clarity AI** is an intelligent dispute resolution platform built for **e-commerce and customer service industries.** By combining the cognitive power of **OpenAI GPT-4 with the ethical oversight of Portia AI,** it automates complex payment and refund disputes in seconds—ensuring resolutions that are **fast, fair, and compliant.**
+
+Instead of days of manual back-and-forth, businesses get a **scalable and trustworthy** solution that reduces support costs, improves customer trust, and streamlines the entire refund and service issue workflow.  
 
 🚀 Developed for **_AgentHack 2025_** by **_WeMakeDevs_**, Clarity AI ensures that disputes are resolved efficiently while maintaining **_ethical integrity, regulatory compliance, and human oversight_** whenever necessary.
 
